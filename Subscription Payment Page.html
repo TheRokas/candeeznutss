@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Subscription</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e2e2e; /* Dark gray background */
+            color: #f0f0f0; /* Light gray text */
+            line-height: 1.6;
+        }
+        header {
+            background-color: #ff69b4; /* Light pink header */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .subscription-option {
+            background-color: #444; /* Darker gray for option boxes */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: 30%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background-color: #ff69b4; /* Light pink button */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #ff1493; /* Deep pink on hover */
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333; /* Dark footer */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Choose Your Subscription</h1>
+    </header>
+    <main>
+        <h2>Select a Plan</h2>
+        <div class="subscription-option">
+            <h3>Basic Plan</h3>
+            <p>$9.99/month</p>
+            <button class="button">Subscribe</button>
+        </div>
+        <div class="subscription-option">
+            <h3>Pro Plan</h3>
+            <p>$19.99/month</p>
+            <button class="button">Subscribe</button>
+        </div>
+        <div class="subscription-option">
+            <h3>Premium Plan</h3>
+            <p>$29.99/month</p>
+            <button class="button">Subscribe</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Candy.ai Clone. All rights reserved.</p>
+    </footer>
+</body>
+</html>

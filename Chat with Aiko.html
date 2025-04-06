@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Aiko</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e2e2e; /* Dark gray background */
+            color: #f0f0f0; /* Light gray text */
+            line-height: 1.6;
+        }
+        header {
+            background-color: #ff69b4; /* Light pink header */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main {
+            display: flex;
+            padding: 40px 20px;
+            align-items: flex-start;
+        }
+        .ai-girl {
+            width: 40%;
+            margin-right: 20px;
+            background-color: #444; /* Darker gray for character boxes */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .ai-girl img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .chat-box {
+            width: 60%;
+            background-color: #555; /* Slightly lighter gray for chat box */
+            border-radius: 10px;
+            padding: 20px;
+            height: 400px;
+            overflow-y: auto;
+        }
+        .chat-input {
+            display: flex;
+            margin-top: 20px;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+        }
+        .chat-input button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ff69b4; /* Light pink button */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .chat-input button:hover {
+            background-color: #ff1493; /* Deep pink on hover */
+        }
+        footer {
+            background-color: #333; /* Dark footer */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="candy_ai_clone_ai_girls.html" style="color: white;">&lt; Back</a>
+        <h1 style="font-size: 1.5em; margin: 0;">Chat with Aiko</h1>
+    </header>
+    <main>
+        <div class="ai-girl">
+            <img src="aiko.jpg" alt="Aiko" /> <!-- Placeholder for AI girl image -->
+            <p>Aiko is a cheerful companion who loves to chat and provide support in daily tasks.</p>
+        </div>
+        <div class="chat-box">
+            <div id="chat-log">
+                <p><strong>Aiko:</strong> Hi there! How can I assist you today?</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Candy.ai Clone. All rights reserved.</p>
+    </footer>
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('user-input');
+            const message = input.value;
+            if (message) {
+                const chatLog = document.getElementById('chat-log');
+                chatLog.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+                input.value = '';
+
+                // Simulate AI response
+                setTimeout(() => {
+                    chatLog.innerHTML += `<p><strong>Aiko:</strong> I'm here to help!</p>`;
+                    chatLog.scrollTop = chatLog.scrollHeight; // Scroll to the bottom
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>
